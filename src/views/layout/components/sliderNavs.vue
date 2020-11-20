@@ -15,12 +15,14 @@
     </div>
     <ul class="user-info">
       <li>{{ $store.state.user.username }}<a-icon type="down" /></li>
-      <li class="btn">退出</li>
+      <li class="btn" @click="loginOutClick">退出</li>
     </ul>
   </div>
 </template>
 
 <script>
+import { removeUserCookies } from '@/utils/userCookie';
+
 export default {
 
   data() {
@@ -32,6 +34,10 @@ export default {
   methods: {
     toggleCollapsed() {
       this.$store.dispatch('changeCollapsed');
+    },
+    loginOutClick() {
+      removeUserCookies();
+      this.$router.push('/login');
     },
   },
 };

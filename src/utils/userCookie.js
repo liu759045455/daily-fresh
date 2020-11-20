@@ -31,6 +31,6 @@ export function removeUserCookies() {
   Cookies.remove('username');
   Cookies.remove('appkey');
   Cookies.remove('role');
-  Cookies.remove('emali');
+  Cookies.remove('email');
   return true;
 }

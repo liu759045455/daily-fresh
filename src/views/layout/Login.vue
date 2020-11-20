@@ -1,5 +1,6 @@
 <template>
   <div class="login">
+
     <a-form-model
       ref="loginForm"
       :model="loginForm"
@@ -7,6 +8,7 @@
       v-bind="layout"
       class="login-form"
     >
+    <div class="loginh2">登陆界面</div>
       <a-form-model-item has-feedback label="邮箱" prop="email">
         <a-input v-model="loginForm.email" placeholder="请输入邮箱" />
       </a-form-model-item>
