@@ -14,7 +14,7 @@
       </a-breadcrumb>
     </div>
     <ul class="user-info">
-      <li>欢迎小不懂<a-icon type="down" /></li>
+      <li>{{ $store.state.user.username }}<a-icon type="down" /></li>
       <li class="btn">退出</li>
     </ul>
   </div>

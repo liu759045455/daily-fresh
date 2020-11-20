@@ -72,6 +72,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           user.login(this.loginForm).then((res) => {
+            this.$store.dispatch('setUserInfo', res);
             alert('登陆成功!');
             this.$router.push('/');
             return res;
