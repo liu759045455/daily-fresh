@@ -6,6 +6,8 @@ const roleToRouter = {
     name: 'ProductList',
   }, {
     name: 'ProductAdd',
+  }, {
+    name: 'ProductEdit',
   }],
   admin: [{
     name: 'Product',
@@ -13,6 +15,8 @@ const roleToRouter = {
     name: 'ProdictionList',
   }, {
     name: 'ProduciontAdd',
+  }, {
+    name: 'ProductEdit',
   }, {
     name: 'Category',
   }],
@@ -24,7 +28,6 @@ const roleToRouter = {
  * @param {Array} routes
  */
 export default function getMenuRouter(role, routes) {
-  console.log(role, routes);
   const allowRouterName = roleToRouter[role].map((item) => item.name);
   const resultRoutes = routes.filter((item) => {
     const obj = item;
