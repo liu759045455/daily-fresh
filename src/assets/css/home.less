@@ -20,6 +20,7 @@
         }
 
         .main-header {
+            display: flex;
             height: 50px;
             line-height: 50px;
             border-bottom: 1px solid #eee;
@@ -29,18 +30,25 @@
             .breadcrumb {
                 display: inline-block;
                 margin-left: 20px;
+                .ant-breadcrumb{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-top: 5px;
+                }
             }
 
             .user-info {
-                float: right;
+                position: absolute;
                 text-align: center;
                 cursor: pointer;
+                right: 20px;
+                z-index: 10;
 
                 li:not(:first-child) {
                     display: none;
                     &:hover {
-                        background-color: #eee;
-                        color: #999;
+                        background-color:#30A679;
+                        color: #fff;
                         font-weight: 700;
                     }
                 }

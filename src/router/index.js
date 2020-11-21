@@ -51,6 +51,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    redirect: { name: 'Index' },
     meta: {
       title: '首页',
       icon: 'home',
